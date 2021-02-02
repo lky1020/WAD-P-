@@ -42,10 +42,10 @@ namespace BusTicketing
             else
             {
                 // Calculate the ticket price
-                // int adult = Int32.Parse(txtAdult.Text);
-                // int child = Int32.Parse(txtChild.Text);
+                int adult = Int32.Parse(txtAdult.Text);
+                int child = Int32.Parse(txtChild.Text);
 
-                txtPrice.Text = "RM 93.50";
+                txtPrice.Text = (adult * 25.5 + child * 13.5).ToString("0.00");
             }
 
         }

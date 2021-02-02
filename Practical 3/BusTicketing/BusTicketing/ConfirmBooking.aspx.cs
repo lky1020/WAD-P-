@@ -27,7 +27,7 @@ namespace BusTicketing
                                     "From : " + TravelFrom.SelectedItem.Value + "</br>" +
                                     "To : " + TravelTo.SelectedItem.Value + "</br>" +
                                     AdultNo.Text + " Adult and " + ChildNo.Text + " Child. </br>" +
-                                    "Ticket Price : " + TicketPrice.Text;
+                                    "Ticket Price : RM " + TicketPrice.Text;
 
             }
         }
