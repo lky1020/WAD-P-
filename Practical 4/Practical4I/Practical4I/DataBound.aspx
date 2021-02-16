@@ -61,7 +61,7 @@
             </asp:SqlDataSource>
             <br />
             <br />
-            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="OrderID" DataSourceID="SqlDataSource2" ForeColor="Black" GridLines="None" Height="50px" Width="125px">
+            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="OrderID" DataSourceID="SqlDataSource2" ForeColor="Black" GridLines="None" Height="50px" Width="327px">
                 <AlternatingRowStyle BackColor="PaleGoldenrod" />
                 <EditRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
                 <Fields>
@@ -75,11 +75,53 @@
             </asp:DetailsView>
             <br />
             <br />
-            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="Select Orders.OrderID, Orders.OrderDate, Orders.RequiredDate FROM Customers INNER JOIN Orders ON Orders.CustomerID = @CustomerID">
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="Select DISTINCT(Orders.OrderID), Orders.OrderDate, Orders.RequiredDate FROM Customers INNER JOIN Orders ON Orders.CustomerID = @CustomerID">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="GridView1" Name="CustomerID" PropertyName="SelectedValue" />
                 </SelectParameters>
             </asp:SqlDataSource>
+            <br />
+            <br />
+
+            <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource2">
+                <ItemTemplate>
+                    <tr>
+                        <td><br />Order ID: </td>
+                        <td>
+                            <asp:Label ID="lblOrderID" runat="server" Text='<%#Eval("OrderID") %>'/> <br />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Order Date: </td>
+                        <td>
+                            <asp:Label ID="lblOrderDate" runat="server" Text='<%#Eval("OrderDate") %>'/> <br />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Required Date: </td>
+                        <td>
+                            <asp:Label ID="lblRequiredDate" runat="server" Text='<%#Eval("RequiredDate") %>'/>
+                        </td>
+                    </tr>
+                </ItemTemplate>
+                <SeparatorTemplate>  
+                    <tr>  
+                        <td></td>  
+                        <td>  
+                            <br />  
+                        </td>
+                    </tr> 
+                    <tr>  
+                        <td>  
+                        </td>  
+                        <td>  
+                            <br />  <hr />
+                        </td>  
+                    </tr> 
+            </SeparatorTemplate> 
+            </asp:Repeater>
         </div>
     </form>
 </body>
