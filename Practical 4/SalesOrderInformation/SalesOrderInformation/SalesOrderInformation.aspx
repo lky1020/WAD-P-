@@ -69,7 +69,7 @@
 
                         <br />
 
-                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT P.ProductName, OD.UnitPrice, OD.Quantity, OD.Discount FROM Products P JOIN [Order Details] OD ON(P.ProductID = OD.ProductID) WHERE OrderID = @OrderID ">
+                        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT P.ProductName, OD.UnitPrice, OD.Quantity, OD.Discount, (OD.UnitPrice * OD.Quantity) AS Sales FROM Products P JOIN [Order Details] OD ON(P.ProductID = OD.ProductID)  WHERE OrderID = @OrderID ">
                             <SelectParameters>
                                 <asp:ControlParameter ControlID="GridView1" Name="OrderID" PropertyName="SelectedValue" />
                             </SelectParameters>
@@ -91,7 +91,7 @@
                                 <asp:Label ID="DiscountLabel" runat="server" Text='<%# Eval("Discount", "{0:0}") %>' />%
                                 <br />
                                 Sales: $
-                                <asp:Label ID="SalesLabel" runat="server"/>
+                                <asp:Label ID="SalesLabel" runat="server" Text='<%# Eval("Sales", "{0:0.00}") %>'/>
                                 <br />
                                 <br />
                             </ItemTemplate>

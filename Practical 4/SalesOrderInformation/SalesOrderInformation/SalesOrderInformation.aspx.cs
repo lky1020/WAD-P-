@@ -29,7 +29,7 @@ namespace SalesOrderInformation
             //    calculteTotalSales();
             //}
 
-            calculteTotalSales();
+            //calculteTotalSales();
         }
 
         private DataSet RetrieveEmployeeName()
@@ -107,7 +107,7 @@ namespace SalesOrderInformation
             double grandTotalSales = Double.Parse(str);
 
             lblTitleGridView.Text = "Sales Order by " + ddlStaffName.SelectedItem.Text + " in the year of " + rdlYear.SelectedValue +
-                ". Grand Total Sales: $" + grandTotalSales.ToString("0.00");
+                ". Grand Total Sales: $" + grandTotalSales.ToString("#,##0.00");
 
             conn.Close();
         }
@@ -121,7 +121,9 @@ namespace SalesOrderInformation
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //calculteTotalSales();
+            DataList1.DataBind();
+            calculteTotalSales();
+
         }
 
         private void calculteTotalSales()
@@ -134,8 +136,6 @@ namespace SalesOrderInformation
                 //Calculate GrandTotal
                 foreach (DataListItem item in DataList1.Items)
                 {
-                    double sales = 0;
-
                     Label lblUnitPrice = item.FindControl("UnitPriceLabel") as Label;
                     Label lblQuantity = item.FindControl("QuantityLabel") as Label;
                     Label lblDiscount = item.FindControl("DiscountLabel") as Label;
@@ -147,19 +147,15 @@ namespace SalesOrderInformation
 
                     if (discount != 0.0)
                     {
-                        sales = unitPrice * quantity * discount;
-                        grandTotal += sales;
+                        grandTotal += unitPrice * quantity * discount;
                     }
                     else
                     {
-                        sales = unitPrice * quantity;
-                        grandTotal += sales;
+                        grandTotal += unitPrice * quantity;
                     }
-
-                    lblSales.Text = sales.ToString("0.00");
                 }
 
-                lblOldSales.Text = "Total Sales for <b>Order ID:" + GridView1.SelectedRow.Cells[1].Text + "=$" + grandTotal.ToString("0.00") + "</b>";
+                lblOldSales.Text = "Total Sales for <b>Order ID:" + GridView1.SelectedRow.Cells[1].Text + "=$" + grandTotal.ToString("#,##0.00") + "</b>";
             }
 
         }

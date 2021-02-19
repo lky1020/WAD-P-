@@ -25,7 +25,18 @@ JOIN [Employees] E
 ON(O.EmployeeID = E.EmployeeID) 
 WHERE E.EmployeeID = '1' AND YEAR(O.OrderDate) = '1997'*/
 
-SELECT * FROM Orders
-WHERE EmployeeID = '1' AND YEAR(OrderDate) = '1998'
+/*SELECT * FROM Orders
+WHERE EmployeeID = '1' AND YEAR(OrderDate) = '1998'*/
+
+/*SELECT SUM(OD.UnitPrice * OD.Quantity) AS Sales
+FROM [Order Details] OD JOIN [Orders] O  
+ON(OD.OrderID = O.OrderID)
+JOIN [Employees] E
+ON(O.EmployeeID = E.EmployeeID) 
+WHERE O.OrderID = '10277' AND YEAR(O.OrderDate) = '1996'*/
+
+SELECT P.ProductName, OD.UnitPrice, OD.Quantity, OD.Discount, (OD.UnitPrice * OD.Quantity) AS Sales
+FROM Products P JOIN [Order Details] OD ON(P.ProductID = OD.ProductID) 
+WHERE OrderID = @OrderID 
 
 
