@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Practical4ii.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,9 +15,11 @@ namespace Practical4ii
 
         }
 
-        protected void SqlDataSource1_Selected(object sender, SqlDataSourceStatusEventArgs e)
+        public IQueryable gvBooks_GetData()
         {
-            lblRecord.Text = e.AffectedRows.ToString();
+            BooksInventoryEntities _db = new BooksInventoryEntities();
+            lblRecord.Text = _db.Books.Count().ToString();
+            return _db.Books;
         }
     }
 }

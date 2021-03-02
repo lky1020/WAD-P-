@@ -16,16 +16,12 @@
             <br />
             <br />
 
-            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ISBN" DataSourceID="SqlDataSource1" AllowPaging="True">
-                <Columns>
-                    <asp:BoundField DataField="ISBN" HeaderText="ISBN" InsertVisible="False" ReadOnly="True" SortExpression="ISBN" />
-                    <asp:BoundField DataField="Title" HeaderText="Title" SortExpression="Title" />
-                    <asp:BoundField DataField="Author" HeaderText="Author" SortExpression="Author" />
-                    <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
-                </Columns>
-            </asp:GridView>
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Book]" OnSelected="SqlDataSource1_Selected"></asp:SqlDataSource>
+            <asp:GridView ID="gvBooks" runat="server" SelectMethod="gvBooks_GetData">
+        </asp:GridView>
         </div>
+
+        <br />
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Menu.aspx">Back to Menu</asp:HyperLink>
     </form>
 </body>
 </html>
