@@ -78,6 +78,8 @@
     <Content Include="App_Data\BooksInventory_log.ldf">
       <DependentUpon>BooksInventory.mdf</DependentUpon>
     </Content>
+    <Content Include="BookCount.aspx" />
+    <Content Include="DeleteBooks.aspx" />
     <Content Include="Menu.aspx" />
     <Content Include="Models\Book.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -89,6 +91,7 @@
       <DependentUpon>Book.edmx</DependentUpon>
       <LastGenOutput>Book1.cs</LastGenOutput>
     </Content>
+    <Content Include="UpdateBooks.aspx" />
     <Content Include="ViewBooks.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -99,6 +102,20 @@
     </Compile>
     <Compile Include="AddBooks.aspx.designer.cs">
       <DependentUpon>AddBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BookCount.aspx.cs">
+      <DependentUpon>BookCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BookCount.aspx.designer.cs">
+      <DependentUpon>BookCount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteBooks.aspx.cs">
+      <DependentUpon>DeleteBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DeleteBooks.aspx.designer.cs">
+      <DependentUpon>DeleteBooks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Menu.aspx.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
@@ -126,6 +143,13 @@
       <DependentUpon>Book.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UpdateBooks.aspx.cs">
+      <DependentUpon>UpdateBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UpdateBooks.aspx.designer.cs">
+      <DependentUpon>UpdateBooks.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewBooks.aspx.cs">
       <DependentUpon>ViewBooks.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <p style="font-size: 36px; font-weight: bold;">View Books</p>
+            <p style="font-size: 24px; font-weight: bold;">View Books</p>
 
             <br />
 
