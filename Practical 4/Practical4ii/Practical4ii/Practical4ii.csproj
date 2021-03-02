@@ -73,10 +73,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddBooks.aspx" />
     <Content Include="App_Data\BooksInventory.mdf" />
     <Content Include="App_Data\BooksInventory_log.ldf">
       <DependentUpon>BooksInventory.mdf</DependentUpon>
     </Content>
+    <Content Include="Menu.aspx" />
     <Content Include="Models\Book.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Book.Context.cs</LastGenOutput>
@@ -87,9 +89,24 @@
       <DependentUpon>Book.edmx</DependentUpon>
       <LastGenOutput>Book1.cs</LastGenOutput>
     </Content>
+    <Content Include="ViewBooks.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddBooks.aspx.cs">
+      <DependentUpon>AddBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddBooks.aspx.designer.cs">
+      <DependentUpon>AddBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\Book.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -109,6 +126,13 @@
       <DependentUpon>Book.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewBooks.aspx.cs">
+      <DependentUpon>ViewBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewBooks.aspx.designer.cs">
+      <DependentUpon>ViewBooks.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Models\Book.edmx">
