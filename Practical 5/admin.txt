@@ -1,0 +1,5 @@
+iisexpress.exe /path:"C:\Windows\Microsoft.NET\Framework\v4.0.30319\ASP.NETWebAdminFiles" /vpath:"/WebAdmin" /port:44300 /clr:4.0 /ntlm
+
+
+
+http://localhost:44300/WebAdmin/default.aspx?applicationPhysicalPath=C:\Users\User\Desktop\WAD%20(P)\Practical%205\SchoolService&applicationUrl=/AppAdmin

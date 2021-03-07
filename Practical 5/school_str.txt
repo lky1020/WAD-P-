@@ -1,0 +1,1 @@
+Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename="C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\App_Data\School.mdf";Integrated Security=True
