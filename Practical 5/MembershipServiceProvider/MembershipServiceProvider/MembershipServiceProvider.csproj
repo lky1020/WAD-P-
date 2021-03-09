@@ -72,6 +72,7 @@
       <DependentUpon>Membership.mdf</DependentUpon>
     </Content>
     <Content Include="CreateUser.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Maintenance\Maintenance.aspx" />
     <Content Include="Menu.aspx" />
@@ -87,6 +88,9 @@
     </Compile>
     <Compile Include="CreateUser.aspx.designer.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -134,7 +138,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Maintenance\Web.config" />
-    <Content Include="MyAccount\Web.config" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

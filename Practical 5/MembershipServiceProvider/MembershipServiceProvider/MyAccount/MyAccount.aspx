@@ -11,7 +11,7 @@
         <div>
             The Halloween Store - My Account
             <br />
-            (Only authenticated users cn access this page.)
+            (Only authenticated users can access this page.)
 
             <br />
             <br />

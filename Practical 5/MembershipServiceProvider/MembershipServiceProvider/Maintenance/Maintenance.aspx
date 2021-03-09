@@ -29,7 +29,7 @@
             <br />
             <br />
 
-            If this isn't your correct username, please <asp:HyperLink ID="HyperLink3" runat="server" Font-Underline="true">click here</asp:HyperLink>
+            If this isn't your correct username, please <asp:HyperLink ID="HyperLink3" runat="server" Font-Underline="true" NavigateUrl="~/Login.aspx">click here</asp:HyperLink>
 
             <br />
             <br />

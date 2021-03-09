@@ -21,7 +21,7 @@
             <br />
 
             <asp:HyperLink ID="HyperLink2" runat="server" Font-Underline="true" NavigateUrl="~/MyAccount/MyAccount.aspx">Edit My Account</asp:HyperLink><br /> 
-            (All unathenticated users)
+            (All authenticated users)
 
             <br /> 
             <br />
