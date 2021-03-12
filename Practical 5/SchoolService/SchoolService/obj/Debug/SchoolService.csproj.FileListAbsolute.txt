@@ -52,8 +52,8 @@ C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\bin\roslyn
 C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\obj\Debug\SchoolService.csprojAssemblyReference.cache
 C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\obj\Debug\SchoolService.csproj.CoreCompileInputs.cache
 C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\obj\Debug\SchoolService.csproj.CopyComplete
 C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\obj\Debug\SchoolService.dll
 C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\obj\Debug\SchoolService.pdb
+C:\Users\User\Desktop\WAD (P)\Practical 5\SchoolService\SchoolService\obj\Debug\SchoolService.csprojAssemblyReference.cache
