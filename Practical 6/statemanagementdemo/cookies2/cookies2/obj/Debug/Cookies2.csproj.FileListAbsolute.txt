@@ -1,0 +1,6 @@
+F:\Practical 6\StateManagementDemo\Cookies2\Cookies2\bin\Cookies2.dll.config
+F:\Practical 6\StateManagementDemo\Cookies2\Cookies2\bin\Cookies2.dll
+F:\Practical 6\StateManagementDemo\Cookies2\Cookies2\bin\Cookies2.pdb
+F:\Practical 6\StateManagementDemo\Cookies2\Cookies2\obj\Debug\Cookies2.csprojResolveAssemblyReference.cache
+F:\Practical 6\StateManagementDemo\Cookies2\Cookies2\obj\Debug\Cookies2.dll
+F:\Practical 6\StateManagementDemo\Cookies2\Cookies2\obj\Debug\Cookies2.pdb

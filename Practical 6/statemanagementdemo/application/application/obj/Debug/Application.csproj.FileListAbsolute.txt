@@ -1,0 +1,6 @@
+F:\Practical 6\StateManagementDemo\Application\Application\bin\Application.dll.config
+F:\Practical 6\StateManagementDemo\Application\Application\bin\Application.dll
+F:\Practical 6\StateManagementDemo\Application\Application\bin\Application.pdb
+F:\Practical 6\StateManagementDemo\Application\Application\obj\Debug\Application.csprojResolveAssemblyReference.cache
+F:\Practical 6\StateManagementDemo\Application\Application\obj\Debug\Application.dll
+F:\Practical 6\StateManagementDemo\Application\Application\obj\Debug\Application.pdb

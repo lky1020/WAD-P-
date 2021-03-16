@@ -1,0 +1,6 @@
+F:\Practical 6\StateManagementDemo\Caching\Caching\bin\Caching.dll.config
+F:\Practical 6\StateManagementDemo\Caching\Caching\bin\Caching.dll
+F:\Practical 6\StateManagementDemo\Caching\Caching\bin\Caching.pdb
+F:\Practical 6\StateManagementDemo\Caching\Caching\obj\Debug\Caching.csprojResolveAssemblyReference.cache
+F:\Practical 6\StateManagementDemo\Caching\Caching\obj\Debug\Caching.dll
+F:\Practical 6\StateManagementDemo\Caching\Caching\obj\Debug\Caching.pdb
