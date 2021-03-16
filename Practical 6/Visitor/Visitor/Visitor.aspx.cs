@@ -12,19 +12,19 @@ namespace Visitor
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.lblVisitor.Text = (String)this.Session["numVisitor"];
+            this.lblVisitor.Text = this.Application["intVisitors"].ToString();
 
-            this.lblDateAccess.Text = (String)this.Session["dateAccess"];
+            this.lblDateAccess.Text = (String)this.Session["Time"];
         }
 
         protected void btnApply_Click(object sender, EventArgs e)
         {
             if (ckRemember.Checked)
             {
-                int numVisitor = Int32.Parse(this.lblVisitor.Text);
+                //int numVisitor = Int32.Parse(this.lblVisitor.Text);
 
-                this.Session["numVisitor"] = (numVisitor + 1).ToString();
-                this.Session["dateAccess"] = DateTime.Now.ToString();
+                //this.Session["intVisitors"] = (numVisitor + 1).ToString();
+                //this.Session["Time"] = DateTime.Now.ToString();
                 this.Session["SelectedCss"] = ddlTheme.SelectedItem.Text + ".css";
             }
         }

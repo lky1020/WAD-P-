@@ -11,9 +11,9 @@ namespace Visitor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.lblVisitor.Text = (String)this.Session["numVisitor"];
+            this.lblVisitor.Text = this.Application["intVisitors"].ToString();
 
-            this.lblDateAccess.Text = (String)this.Session["dateAccess"];
+            this.lblDateAccess.Text = (String)this.Session["Time"];
         }
     }
 }

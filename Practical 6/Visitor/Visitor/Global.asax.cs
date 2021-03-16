@@ -15,19 +15,25 @@ namespace Visitor
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            
+            int intVisitors = 0;
+            Application["intVisitors"] = intVisitors;
         }
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            if(this.Session["numVisitor"] == null)
-            {
-                this.Session["numVisitor"] = "1";
-                this.Session["dateAccess"] = DateTime.Now.ToString();
-            }
-            
-            sessionVisitor = Int32.Parse((String)this.Session["numVisitor"]);
-            sessionDateAccess = (String)this.Session["dateAccess"];
+            Session["Time"] = DateTime.Now.ToString();
+            Application.Lock();
+            Application["intVisitors"] = (int)Application["intVisitors"] + 1;
+            Application.UnLock();
+
+            //if (this.Session["numVisitor"] == null)
+            //{
+            //    this.Session["numVisitor"] = "1";
+            //    this.Session["dateAccess"] = DateTime.Now.ToString();
+            //}
+
+            //sessionVisitor = Int32.Parse((String)this.Session["numVisitor"]);
+            //sessionDateAccess = (String)this.Session["dateAccess"];
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -47,7 +53,9 @@ namespace Visitor
 
         protected void Session_End(object sender, EventArgs e)
         {
-
+            Application.Lock();
+            Application["intVisitor"] = (int)Application["intVisitors"] - 1;
+            Application.UnLock();
         }
 
         protected void Application_End(object sender, EventArgs e)
