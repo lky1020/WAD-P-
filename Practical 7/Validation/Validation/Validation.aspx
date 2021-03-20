@@ -14,7 +14,7 @@
                     <td>User Name: </td>
                     <td>
                         <asp:TextBox ID="txtUsername" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="User name is required" ControlToValidate="txtUsername" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="User name is required" ControlToValidate="txtUsername" Text="*" ForeColor="Red" Show></asp:RequiredFieldValidator>
                     </td>
                 </tr>
 
@@ -41,8 +41,7 @@
                     <td>
                         <asp:TextBox ID="txtDOB" runat="server"></asp:TextBox>
                         <asp:RequiredFieldValidator ID="rfvDOB" runat="server" ErrorMessage="Date of Birth is required" ControlToValidate="txtDOB" Text="*" ForeColor="Red"></asp:RequiredFieldValidator>
-                        <%--<asp:CompareValidator ID="cvDOB" runat="server" ErrorMessage="Date of Birth format shoud be MM/DD/YYYY" Text="*" ForeColor="Red" ControlToValidate="txtDOB" Operator="DataTypeCheck" Type="Date">*</asp:CompareValidator>--%>
-                        <asp:RegularExpressionValidator ID="revDOB" runat="server" ControlToValidate="txtDOB" ErrorMessage="Date of Birth format shoud be MM/DD/YYYY" ForeColor="Red" ValidationExpression="^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">*</asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="revDOB" runat="server" ControlToValidate="txtDOB" ErrorMessage="Date of Birth format shoud be MM/DD/YYYY" ForeColor="Red" ValidationExpression="^([1-9]|1[012])[- -.]([1-9]|[12][0-9]|3[01])[- -.](19|20)\d\d">*</asp:RegularExpressionValidator>
                     </td>
                 </tr>
 
@@ -68,7 +67,7 @@
 
             <br />
 
-            <asp:Button ID="btnSubmit" runat="server" Text="Submit"/> &nbsp;&nbsp;
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click"/> &nbsp;&nbsp;
             <asp:Button ID="btnClear" runat="server" Text="Clear" />
 
             <br />
@@ -78,7 +77,12 @@
 
             <br />
 
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="True" />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="False" />
+
+            <br />
+            <br />
+            
+            <asp:Label ID="lblResult" runat="server"></asp:Label>
 
         </div>
     </form>

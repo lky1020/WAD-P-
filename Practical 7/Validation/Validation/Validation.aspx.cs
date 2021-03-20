@@ -11,18 +11,32 @@ namespace Validation
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (rdlCreditCardType.SelectedValue.Equals("Visa"))
+            if (!IsPostBack)
             {
-                //Response.Write("<script>alert('hihi');</script>");
-                revCreditCardNumber.ValidationExpression = "^4[0-9]{12}(?:[0-9]{3})?$";
+                revCreditCardNumber.ValidationExpression = "^4\\d{13}$";
             }
             else
             {
-                //Response.Write("<script>alert('hello');</script>");
-                revCreditCardNumber.ValidationExpression = "^5[1 - 5][0 - 9]{ 14}$";
+                if (rdlCreditCardType.SelectedValue.Equals("Visa"))
+                {
+                    revCreditCardNumber.ValidationExpression = "^4\\d{13}$";
+                }
+                else
+                {
+                    revCreditCardNumber.ValidationExpression = "^5\\d{13}$";
+                }
             }
             
         }
 
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            lblResult.Text = "You have entered the following: <br/>" +
+                    "User name: " + txtUsername.Text + "<br/>" +
+                    "Password: " + txtPassword.Text + "<br/>" +
+                    "Age: " + txtAge.Text + "<br/>" +
+                    "Date of birth: " + txtDOB.Text + "<br/>" +
+                    "Credit card number: " + txtCreditCardNumber.Text + "<br/>";
+        }
     }
 }
