@@ -31,12 +31,16 @@ namespace Validation
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            lblResult.Text = "You have entered the following: <br/>" +
+            if (Page.IsValid)
+            {
+                lblResult.Text = "You have entered the following: <br/>" +
                     "User name: " + txtUsername.Text + "<br/>" +
                     "Password: " + txtPassword.Text + "<br/>" +
                     "Age: " + txtAge.Text + "<br/>" +
                     "Date of birth: " + txtDOB.Text + "<br/>" +
                     "Credit card number: " + txtCreditCardNumber.Text + "<br/>";
+            }
+            
         }
     }
 }

@@ -56,3 +56,4 @@ C:\Users\User\Desktop\WAD (P)\Practical 7\Validation\Validation\obj\Debug\Valida
 C:\Users\User\Desktop\WAD (P)\Practical 7\Validation\Validation\obj\Debug\Validation.csproj.CopyComplete
 C:\Users\User\Desktop\WAD (P)\Practical 7\Validation\Validation\obj\Debug\Validation.dll
 C:\Users\User\Desktop\WAD (P)\Practical 7\Validation\Validation\obj\Debug\Validation.pdb
+C:\Users\User\Desktop\WAD (P)\Practical 7\Validation\Validation\obj\Debug\Validation.csprojAssemblyReference.cache

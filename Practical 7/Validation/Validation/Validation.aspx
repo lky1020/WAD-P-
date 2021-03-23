@@ -73,11 +73,11 @@
             <br />
             <br />
 
-            The following problems have been encountered
+            <asp:Label ID="lblMessage" runat="server"></asp:Label>
 
             <br />
 
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" ShowMessageBox="False" />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" HeaderText="The following problems have been encountered" ShowSummary="true" ShowMessageBox="true" />
 
             <br />
             <br />
