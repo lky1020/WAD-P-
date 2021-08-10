@@ -1,2 +1,2 @@
 # WAD--P-
- Web Application Development
+ Web Application Development - Practical
